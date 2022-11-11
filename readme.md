@@ -9,3 +9,4 @@
 - [ ] Post image script
 - [ ] Setup cron job to run three times a day
 - [ ] Better Tweet retrieval technique
+- [ ] Dockerize the project
