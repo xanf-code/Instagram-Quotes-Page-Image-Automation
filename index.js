@@ -52,13 +52,30 @@ var download = function (uri, filename, callback) {
   });
 };
 
+const uploadImage = async (imagePath) => {
+  const options = {
+    use_filename: true,
+    unique_filename: false,
+    overwrite: true,
+  };
+
+  try {
+    await cloudinary.uploader.upload(imagePath, options);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 (async () => {
   if (tweets_data.length > 0) {
     const url = await generateImage(tweets_data[0].Tweet);
-    console.log(url);
     download(url, "next_post.png", function () {
-      console.log("done");
+      console.log("Image Downloaded");
     });
+    setTimeout(async () => {
+      await uploadImage("next_post.png");
+      console.log("Image Uploaded");
+    }, 10000);
     deleteTopTweet("tweets.json");
   } else {
     console.log("No tweets found");

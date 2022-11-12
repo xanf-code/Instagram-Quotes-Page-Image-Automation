@@ -1,7 +1,7 @@
 ## Insta Post Automation (AutoPilot)
 
 - Get Tweets from a individual user script - [script](https://github.com/xanf-code/Insta-Automation-User-Tweets)
-- Generate image on cloudinary using the tweets obtained
+- Generate image on cloudinary using the tweets obtained - [script](https://github.com/xanf-code/instagram-download-automation)
 - Post on instagram by setting up a cron job
 
 - [x] Obtain Tweets with user as a parameter
