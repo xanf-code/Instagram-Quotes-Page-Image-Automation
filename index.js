@@ -17,7 +17,7 @@ const getTitleTransformation = (title) => {
     {
       overlay: {
         font_family: "Arial",
-        font_size: 80,
+        font_size: 90,
         font_style: "italic",
         text: title,
         line_spacing: 20,
@@ -25,7 +25,6 @@ const getTitleTransformation = (title) => {
       color: "#f8f8ff",
       crop: "fit",
       width: 2500,
-      opacity: 90,
     },
   ];
 };
